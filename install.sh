@@ -3,7 +3,7 @@ set -euo pipefail
 
 echo "[+] Installing base tools..."
 sudo apt update
-sudo apt install -y git curl openssh-client
+sudo apt install -y git openssh-client
 
 echo "[+] Generating SSH key..."
 [ -f ~/.ssh/id_ed25519 ] || ssh-keygen -t ed25519 -C "bootstrap" -f ~/.ssh/id_ed25519 -N ""
