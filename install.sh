@@ -9,6 +9,10 @@ echo "[+] Installing base tools..."
 sudo apt update
 sudo apt install -y git openssh-client
 
+echo "[+] Install Bitwarden..."
+curl -L -o /tmp/bitwarden.deb "https://bitwarden.com/download/?app=desktop&platform=linux&variant=deb" \
+    && sudo dpkg -i /tmp/bitwarden.deb
+
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
