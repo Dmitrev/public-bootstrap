@@ -34,7 +34,9 @@ echo "Add this key to GitHub, then press ENTER"
 read
 
 echo "[+] Testing connection..."
-if ssh -T git@github.com 2>&1 | grep -q "successfully authenticated"; then
+result=$(ssh -T git@github.com 2>&1 || true)
+
+if [[ "$result" == *"successfully authenticated"* ]]; then
     echo "[+] GitHub SSH OK"
 else
     echo "[!] GitHub SSH failed"
