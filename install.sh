@@ -55,5 +55,5 @@ echo "[+] Cloning private repo..."
 if [ -d "$HOME/bootstrap" ]; then
     echo "[+] Repo already exists, skipping"
 else
-    git clone git@github.com:Dmitrev/bootstrap.git ~/bootstrap
+    git clone git@github.com:Dmitrev/dotfiles.git ~/dotfiles
 fi
